@@ -41,7 +41,8 @@ object FirstScala {
  object FirstScala {
    //创建main方法，作为程序的入口。
    //def main(args: Array[String]): Uni= 是方法头。{}中的内容为方法体。
-   //方法头中：def是关键字，main是方法名，(args: Array[String])是参数列表, Unit是返回值类型，':'用于分割方法签名和返回值，'='用于分隔方法头和方体。
+   //方法头中：def是关键字，main是方法名，(args: Array[String])是参数列表, Unit是返回值类型，
+   //':'用于分割方法签名和返回值，'='用于分隔方法头和方体。
    def main(args: Array[String]): Unit = {
      //打印语句，用于输出"hello,world!"
      println("hello,world!")//语句不必用";"结尾
