@@ -20,6 +20,7 @@
    A.编写代码
    根据编程语言的惯例，先编写一个helloworld的简单代码。
    ![](images/Snip20161024_22.png) 
+   代码清单，如下
 ```scala
 package chapter001
 object FirstScala {
