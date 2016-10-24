@@ -35,7 +35,7 @@ object FirstScala {
    ![](images/Snip20161024_28.png) 
    C.程序解释
  ```scala
- //指定package
+ //指定package,不用";"结尾
  package chapter001
  //创建名为FirstScala的object
  object FirstScala {
