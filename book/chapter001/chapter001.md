@@ -11,8 +11,8 @@
 ####2.创建Scala包
    ![](images/Snip20161024_17.png) 
 ####3.创建Scala对象
-   在弹出的窗口中选择【Kind的类型为Object】
    ![](images/Snip20161024_18.png) 
+   在弹出的窗口中选择【Kind的类型为Object】
    ![](images/Snip20161024_20.png)
    进入主界面，主界面中的代码是自动生成的。
    ![](images/Snip20161024_21.png) 
