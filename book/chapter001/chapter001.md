@@ -20,7 +20,6 @@
    A.编写代码
    根据编程语言的惯例，先编写一个helloworld的简单代码。
    ![](images/Snip20161024_22.png) 
-   
 ```scala
 package chapter001
 object FirstScala {
@@ -29,9 +28,22 @@ object FirstScala {
   }
 }
 ```
-
    B.运行代码  
    ![](images/Snip20161024_27.png) 
    选择【Run 'FirstScala'】,运行效果图，如下
    ![](images/Snip20161024_28.png) 
-  
+   C.程序解释
+ ```scala
+ //指定package
+ package chapter001
+ //创建名为FirstScala的object
+ object FirstScala {
+   //创建main方法，作为程序的入口。
+   //def main(args: Array[String]): Unit 是方法头。{}中的内容为方法体。
+   //方法头中：def是关键字，main是方法名，(args: Array[String])是参数列表, Unit是返回值类型。
+   def main(args: Array[String]): Unit = {
+     //打印语句，用于输出"hello,world!"
+     println("hello,world!")
+   }
+ }
+ ``` 
