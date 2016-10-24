@@ -9,9 +9,11 @@
    ![](images/Snip20161024_16.png)  
    左侧是工程结构，中间是快捷键提示！      
 ####2.创建Scala包
+   ![](images/Snip20161024_17.png)
+   输入包名，选择【OK】
    ![](images/Snip20161024_17_0.png)
-   输入包名，选择【OK】，包创建完毕！
-   ![](images/Snip20161024_17.png)  
+   包创建完毕！
+   ![](images/Snip20161024_17_1.png)
 ####3.创建Scala对象
    ![](images/Snip20161024_18.png) 
    在弹出的窗口中选择【Kind的类型为Object】
