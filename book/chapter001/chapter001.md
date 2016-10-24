@@ -5,7 +5,7 @@
    选择,创建[scala]项目
    ![](images/Snip20161024_14.png) 
    输入项目名称，选择【finish】进入下面的窗口。
-   ![](images/Snip20161024_15.png) 
+   ![](images/Snip20161024_15.png)
    左侧是工程结构，中间是快捷键提示！
    ![](images/Snip20161024_16.png) 
 ####2.创建Scala包
