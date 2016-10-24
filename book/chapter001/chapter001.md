@@ -1,12 +1,12 @@
 ####1.创建Scala工程
-   ![](images/Snip20161024_12.png) 
    选择[Create New Porject]
-   ![](images/Snip20161024_13.png) 
+   ![](images/Snip20161024_12.png) 
    选择,创建[scala]项目
-   ![](images/Snip20161024_14.png) 
+   ![](images/Snip20161024_13.png) 
    输入项目名称，选择【finish】进入下面的窗口。
-   ![](images/Snip20161024_16.png) 
+   ![](images/Snip20161024_14.png) 
    左侧是工程结构，中间是快捷键提示！
+   ![](images/Snip20161024_16.png) 
 ####2.创建Scala包
    ![](images/Snip20161024_17.png) 
 ####3.创建Scala对象
