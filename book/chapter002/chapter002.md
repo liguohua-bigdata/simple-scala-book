@@ -10,11 +10,13 @@
 1.在scale中root class是scala.Any，代表着一切类型.它是Scala所有类的父类，所有类都是他直接或间接的子类。在这个类中定义的方法成为，
   所有类的共同的方法，在任何类型的对象中都能够调用。这个类中定义了以下几个方法。
  >>
+```scala
  final def ==(that: Any): Boolean  
  final def !=(that: Any): Boolean  
  def equals(that: Any): Boolean  
  def hashCode: Int  
  def toString: String   
+```
  解释：  
  1.因为所有类都是Any的子类，所以所有对象都可以用 ==，!=进行比较。用于比较两个对象的引用是否相等。这两个方法都声明为final，子类不能重写。  
  2.因为所有类都是Any的子类，所以所有对象都可以用 equals进行比较。此方法默认和==一样比较对象的引用是否相同，但他可以覆写成自定义的比较方式。  
