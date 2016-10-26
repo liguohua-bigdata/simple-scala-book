@@ -1,0 +1,165 @@
+##一.Scala的类型系统
+
+创建长度为10的int类型数组
+```scala
+scala>     var arr:Array[Int]=new Array[Int](10)
+arr: Array[Int] = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+```
+
+数组的类型可以自动推断
+```scala
+scala>  var arr=new Array[Int](10)
+arr: Array[Int] = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+```
+
+
+```scala
+scala> val arr=new Array[Int](10)
+arr: Array[Int] = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+```
+
+
+如果数组元素的类型是ValAny,那么数组元素的默认值是0,0.0,false
+```scala
+scala> val arr=new Array[Int](5)
+arr: Array[Int] = Array(0, 0, 0, 0, 0)
+
+scala> val arr=new Array[Float](5)
+arr: Array[Float] = Array(0.0, 0.0, 0.0, 0.0, 0.0)
+
+scala> val arr=new Array[Boolean](5)
+arr: Array[Boolean] = Array(false, false, false, false, false)
+```
+
+
+如果数组元素的类型是RefAny,那么数组元素的默认值是null
+```scala
+scala> val arr=new Array[String](10)
+arr: Array[String] = Array(null, null, null, null, null, null, null, null, null, null)
+```
+
+
+调用数组的apply()方法也可以定义数组，元素类型和数组长度都可以推断
+```scala
+scala> val arr=Array(18,20,87,4,23)
+arr: Array[Int] = Array(18, 20, 87, 4, 23)
+
+scala> arr.length
+res1: Int = 5
+```
+
+
+
+```scala
+
+```
+
+
+```scala
+
+```
+
+
+```scala
+
+```
+
+
+
+```scala
+
+```
+
+
+```scala
+
+```
+
+
+
+```scala
+
+```
+
+
+```scala
+
+```
+
+
+
+```scala
+
+```
+
+
+```scala
+
+```
+
+
+
+```scala
+
+```
+
+
+```scala
+
+```
+
+
+
+```scala
+
+```
+
+
+```scala
+
+```
+
+
+
+```scala
+
+```
+
+
+```scala
+
+```
+
+
+
+```scala
+
+```
+
+
+```scala
+
+```
+
+
+
+```scala
+
+```
+
+
+```scala
+
+```
+
+
+
+```scala
+
+```
+
+
+
+
+
+
