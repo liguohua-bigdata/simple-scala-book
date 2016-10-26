@@ -16,8 +16,10 @@ arr: Array[Int] = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 ```scala
 scala> val arr=new Array[Int](5)
 arr: Array[Int] = Array(0, 0, 0, 0, 0)
+
 scala> val arr=new Array[Float](5)
 arr: Array[Float] = Array(0.0, 0.0, 0.0, 0.0, 0.0)
+
 scala> val arr=new Array[Boolean](5)
 arr: Array[Boolean] = Array(false, false, false, false, false)
 ```
