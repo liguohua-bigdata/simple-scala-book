@@ -24,10 +24,11 @@
  d.因为所有类都是Any的子类，所以所有对象都可以用 toString进行对象字符串的格式。可以重写成自定义的方式。   
  
 2.scala.Any有两个子类scala.AnyVal，scala.AnyRef分别代表一切数值类型和一切引用类型.   
->>2.1 scala.AnyVal有Byte、Short、Char、Int、Long、Float、Double、Boolean和Unit9个具体类型,前8个都对应到Java的基本类型.  
+>>2.1 scala.AnyVal有Byte、Short、Char、Int、Long、Float、Double、Boolean和Unit9个具体类型,前8个都对应到Java的基本类型.Unit和Java中的void大致等价，它只有一个实例值，写成()。  
 >>2.2 scala.AnyRef实际上是Java的java.lang.Object类别名。所以我们自定义类型都是该类的子类。  
+>>2.3 AnyVal和AnyRef有一个共同的子类Nothing表示不正常的终止。
+>>2.4 Null类型是AnyRef的子类型，它可兼容任何AnyRef类型，但不兼容AnyVal。因此引用类型的可以赋值为null但数值类型不可以赋值为null。
 
->3.scala.Nothing是所有类的子类  
 
 
 
