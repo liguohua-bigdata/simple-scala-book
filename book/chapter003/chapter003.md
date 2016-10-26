@@ -103,6 +103,7 @@ object ArrayTest {
 
 直接对元素进行遍历
 ![](images/Snip20161026_4.png) 
+代码如下：
 ```scala
 package chapter003
 object ArrayTest {
@@ -118,6 +119,7 @@ object ArrayTest {
 
 指定步长进行遍历
 ![](images/Snip20161026_5.png) 
+代码如下：
 ```scala
 package chapter003
 
@@ -132,15 +134,39 @@ object ArrayTest {
 }
 ```
 
-
+倒序遍历数组
+![](images/Snip20161026_7.png) 
+代码如下：
 ```scala
+package chapter003
 
+object ArrayTest {
+  def main(args: Array[String]): Unit = {
+    val arr = Array(18, 20, 87, 4, 23, 109, 167, 23, 2)
+    //倒序输出
+    for (i <- (0 until arr.length).reverse) {
+      println("arr(" + i + ")=" + arr(i))
+    }
+  }
+}
 ```
 
 
-
+指定步长，倒序遍历数组
+![](images/Snip20161026_8.png) 
+代码如下：
 ```scala
+package chapter003
 
+object ArrayTest {
+  def main(args: Array[String]): Unit = {
+    val arr = Array(18, 20, 87, 4, 23, 109, 167, 23, 2)
+    //指定步长，倒序输出
+    for (i <- (0 until(arr.length,2)).reverse) {
+      println("arr(" + i + ")=" + arr(i))
+    }
+  }
+}
 ```
 
 
