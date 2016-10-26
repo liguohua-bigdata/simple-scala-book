@@ -69,7 +69,7 @@ scala> arr
 res4: Array[Int] = Array(18, 1024, 87, 4, 23)
 ```
 
-数组遍历一
+数组的to遍历
 ![](images/Snip20161026_2.png) 
 代码如下：
 ```scala
@@ -85,20 +85,51 @@ object ArrayTest {
 ```
 
 
-
+数组的until遍历
+![](images/Snip20161026_3.png) 
+代码如下：
 ```scala
+package chapter003
+object ArrayTest {
+  def main(args: Array[String]): Unit = {
+    val arr = Array(18, 20, 87, 4, 23)
+    for (i <- 0 until arr.length) {
+      println("arr(" + i + ")=" + arr(i))
+    }
+  }
+}
 
 ```
 
-
+直接对元素进行遍历
+![](images/Snip20161026_4.png) 
 ```scala
-
+package chapter003
+object ArrayTest {
+  def main(args: Array[String]): Unit = {
+    val arr = Array(18, 20, 87, 4, 23)
+    for (e <- arr) {
+      println(e)
+    }
+  }
+}
 ```
 
 
-
+指定步长进行遍历
+![](images/Snip20161026_5.png) 
 ```scala
+package chapter003
 
+object ArrayTest {
+  def main(args: Array[String]): Unit = {
+    val arr = Array(18, 20, 87, 4, 23, 109, 167, 23, 2)
+    //指定步长
+    for (i <- 0 until(arr.length, 2)) {
+      println("arr(" + i + ")=" + arr(i))
+    }
+  }
+}
 ```
 
 
