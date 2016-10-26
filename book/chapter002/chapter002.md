@@ -1,4 +1,4 @@
-####1.Scala的类型系统
+##一.Scala的类型系统
 在一个语言当中，类型系统的重要性不言而喻。它可以表示:  
 1. 语音支持的数据  
 2. 语言支持的操作  
@@ -15,15 +15,11 @@
  def equals(that: Any): Boolean  
  def hashCode: Int  
  def toString: String   
- 解释：
+ 解释：  
  1.因为所有类都是Any的子类，所以所有对象都可以用 ==，!=进行比较。用于比较两个对象的引用是否相等。这两个方法都声明为final，子类不能重写。  
  2.因为所有类都是Any的子类，所以所有对象都可以用 equals进行比较。此方法默认和==一样比较对象的引用是否相同，但他可以覆写成自定义的比较方式。  
  3.因为所有类都是Any的子类，所以所有对象都可以用 hashCode做散列。可以重写成自定义的方式。  
- 3.因为所有类都是Any的子类，所以所有对象都可以用 toString进行对象字符串的格式。可以重写成自定义的方式。  
- 
- 
- 
- 
+ 4.因为所有类都是Any的子类，所以所有对象都可以用 toString进行对象字符串的格式。可以重写成自定义的方式。   
  
 2.scala.Any有两个子类scala.AnyVal，scala.AnyRef分别代表一切数值类型和一切引用类型.   
 >>2.1 scala.AnyVal有Byte、Short、Char、Int、Long、Float、Double、Boolean和Unit9个具体类型,前8个都对应到Java的基本类型.  
