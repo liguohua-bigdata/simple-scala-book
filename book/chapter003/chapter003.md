@@ -60,6 +60,162 @@ scala> arr(1)=1024
 scala> arr
 res4: Array[Int] = Array(18, 1024, 87, 4, 23)
 ```
+
+###三、数组的基本操作
+1.数组求和
+```scala
+scala> val arr = Array(3,5,8,9,4)
+arr: Array[Int] = Array(3, 5, 8, 9, 4)
+
+scala> arr.sum
+res1: Int = 29
+```
+
+2.数组求最大值
+```scala
+scala> val arr = Array(3,5,8,9,4)
+arr: Array[Int] = Array(3, 5, 8, 9, 4)
+
+scala> arr.max
+res2: Int = 9
+```
+
+3.数组求最小值
+```scala
+scala> val arr = Array(3,5,8,9,4)
+arr: Array[Int] = Array(3, 5, 8, 9, 4)
+
+scala> arr.min
+res4: Int = 3
+```
+
+4.数组的toString()方法，返回数组的哈希地址
+```scala
+scala> val arr = Array(3,5,8,9,4)
+arr: Array[Int] = Array(3, 5, 8, 9, 4)
+
+scala> arr.toString()
+res6: String = [I@19b02dfd
+```
+
+5.数组的toString()方法，返回数组的字符串表达形式
+```scala
+scala> val arr = Array(3,5,8,9,4)
+arr: Array[Int] = Array(3, 5, 8, 9, 4)
+
+scala> arr.mkString(",")
+res7: String = 3,5,8,9,4
+
+scala> arr.mkString("[",",","]")
+res8: String = [3,5,8,9,4]
+
+scala> arr.mkString("#","-","#")
+res9: String = #3-5-8-9-4#
+```
+
+6.数组的克隆
+```scala
+scala> val arr1=Array(3,5,8,9,4)
+arr1: Array[Int] = Array(3, 5, 8, 9, 4)
+
+scala> val arr2=arr1.clone()
+arr2: Array[Int] = Array(3, 5, 8, 9, 4)
+```
+
+7.数组的更新,更新指定下标中的元素
+```scala
+scala> val arr=Array("zhangsan","lisi","wangwu","zhaoliu")
+arr: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+
+scala> arr.update(1,"lily")
+
+scala> arr
+res17: Array[String] = Array(zhangsan, lily, wangwu, zhaoliu)
+```
+
+8.数组是否包含指定的元素
+```scala
+val arr=Array("zhangsan","lisi","wangwu","zhaoliu")
+arr: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+
+scala> arr.contains("zhangsan")
+res22: Boolean = true
+```
+
+9.判断数组为空
+```scala
+scala> val arr=Array("zhangsan","lisi","wangwu","zhaoliu")
+arr: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+
+scala> arr.isEmpty
+res24: Boolean = false
+```
+
+10.判断数组不为空
+```scala
+scala> val arr=Array("zhangsan","lisi","wangwu","zhaoliu")
+arr: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+
+scala> arr.nonEmpty
+res25: Boolean = true
+```
+
+11.查看数组的类型
+```scala
+scala> val arr=Array("zhangsan","lisi","wangwu","zhaoliu")
+arr: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+
+arr.getClass
+res26: Class[_ <: Array[String]] = class [Ljava.lang.String;
+```
+
+12.数组的尾部追加单个元素，返回一个新的数组
+```scala
+scala> val arr1 = Array("zhangsan", "lisi", "wangwu", "zhaoliu")
+arr1: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+
+//返回新的数组
+scala> arr1:+"jack"
+res36: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu, jack)
+
+//原数组不变
+scala> arr1
+res41: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+```
+13.数组的尾部追加数组元素，返回一个新的数组，':+'将整个数组添加到最后一个元素上。
+```scala
+scala> val arr1 = Array("zhangsan", "lisi", "wangwu", "zhaoliu")
+arr1: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+
+scala> val arr2 = Array("jack", "lily")
+arr2: Array[String] = Array(jack, lily)
+
+//返回一个新的数组
+scala> arr1:+arr2
+res42: Array[java.io.Serializable] = Array(zhangsan, lisi, wangwu, zhaoliu, Array(jack, lily))
+
+//原来数组不变
+scala> arr1
+res43: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+```
+
+14.数组的尾部追加数组元素，返回一个新的数组,'++'两个数组的合并成一个新的数组
+```scala
+scala> val arr1 = Array("zhangsan", "lisi", "wangwu", "zhaoliu")
+arr1: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+
+scala> val arr2 = Array("jack", "lily")
+arr2: Array[String] = Array(jack, lily)
+
+//返回一个新的数组，两个数组元素的合并
+scala> arr1++arr2
+res44: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu, jack, lily)
+
+//原来数组不变
+scala> arr1
+res45: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+```
+
 ###三、数组的遍历
 1.数组的to遍历
 ![](images/Snip20161026_2.png) 
