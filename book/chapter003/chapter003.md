@@ -199,7 +199,7 @@ scala> arr1
 res43: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
 ```
 
-14.数组的尾部追加数组元素，返回一个新的数组,'++'两个数组的合并成一个新的数组
+14.数组的尾部追加数组元素，返回一个新的数组,'++'将两个数组的合并成一个新的数组
 ```scala
 scala> val arr1 = Array("zhangsan", "lisi", "wangwu", "zhaoliu")
 arr1: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
