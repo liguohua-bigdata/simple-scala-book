@@ -15,6 +15,14 @@
  def equals(that: Any): Boolean  
  def hashCode: Int  
  def toString: String   
+ 解释：
+ 1.因为所有类都是Any的子类，所以所有对象都可以用 ==，!=进行比较。用于比较两个对象的引用是否相等。这两个方法都声明为final，子类不能重写。
+ 2.因为所有类都是Any的子类，所以所有对象都可以用 equals进行比较。此方法默认和==一样比较对象的引用是否相同，但他可以覆写成自定义的比较方式。
+ 3.因为所有类都是Any的子类，所以所有对象都可以用 hashCode做散列。可以重写成自定义的方式。
+ 3.因为所有类都是Any的子类，所以所有对象都可以用 toString进行对象字符串的格式。可以重写成自定义的方式。
+ 
+ 
+ 
  
  
 2.scala.Any有两个子类scala.AnyVal，scala.AnyRef分别代表一切数值类型和一切引用类型.   
