@@ -1,4 +1,4 @@
-##一.Scala的类型系统
+##一.Scala的Array
 
 创建长度为10的int类型数组
 ```scala
@@ -69,9 +69,19 @@ scala> arr
 res4: Array[Int] = Array(18, 1024, 87, 4, 23)
 ```
 
-
+数组遍历一
+![](images/Snip20161026_2.png) 
+代码如下：
 ```scala
-
+package chapter003
+object ArrayTest {
+  def main(args: Array[String]): Unit = {
+    val arr = Array(18, 20, 87, 4, 23)
+    for (i <- 0 to arr.length - 1) {
+      println("arr(" + i + ")=" + arr(i))
+    }
+  }
+}
 ```
 
 
