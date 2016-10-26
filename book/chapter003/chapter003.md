@@ -49,14 +49,24 @@ res1: Int = 5
 ```
 
 
-
+获取数组中指定下标的元素
 ```scala
+scala> val arr=Array(18,20,87,4,23)
+arr: Array[Int] = Array(18, 20, 87, 4, 23)
 
+scala> arr(0)
+res2: Int = 18
 ```
 
-
+更改数组中指定下标的元素
 ```scala
+scala> val arr=Array(18,20,87,4,23)
+arr: Array[Int] = Array(18, 20, 87, 4, 23)
 
+scala> arr(1)=1024
+
+scala> arr
+res4: Array[Int] = Array(18, 1024, 87, 4, 23)
 ```
 
 
