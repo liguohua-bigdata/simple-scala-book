@@ -216,7 +216,7 @@ scala> arr1
 res45: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
 ```
 
-###三、数组的遍历
+###四、数组的遍历
 1.数组的to遍历
 ![](images/Snip20161026_2.png) 
 代码如下：
