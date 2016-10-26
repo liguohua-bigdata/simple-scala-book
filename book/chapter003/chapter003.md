@@ -27,8 +27,8 @@ arr: Array[Boolean] = Array(false, false, false, false, false)
 
 4.如果数组元素的类型是RefAny,那么数组元素的默认值是null
 ```scala
-scala> val arr=new Array[String](10)
-arr: Array[String] = Array(null, null, null, null, null, null, null, null, null, null)
+scala> val arr=new Array[String](5)
+arr: Array[String] = Array(null, null, null, null, null)
 ```
 
 5.调用数组的apply()方法也可以定义数组，元素类型和数组长度都可以推断
@@ -40,7 +40,8 @@ scala> arr.length
 res1: Int = 5
 ```
 
-6.获取数组中指定下标的元素
+###二、数组的元素
+1.获取数组中指定下标的元素
 ```scala
 scala> val arr=Array(18,20,87,4,23)
 arr: Array[Int] = Array(18, 20, 87, 4, 23)
@@ -49,7 +50,7 @@ scala> arr(0)
 res2: Int = 18
 ```
 
-7.更改数组中指定下标的元素
+2.更改数组中指定下标的元素
 ```scala
 scala> val arr=Array(18,20,87,4,23)
 arr: Array[Int] = Array(18, 20, 87, 4, 23)
@@ -59,7 +60,7 @@ scala> arr(1)=1024
 scala> arr
 res4: Array[Int] = Array(18, 1024, 87, 4, 23)
 ```
-###二、数组的遍历
+###三、数组的遍历
 1.数组的to遍历
 ![](images/Snip20161026_2.png) 
 代码如下：
