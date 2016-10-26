@@ -27,7 +27,7 @@
 >>2.1 scala.AnyVal有Byte、Short、Char、Int、Long、Float、Double、Boolean和Unit9个具体类型,前8个都对应到Java的基本类型.Unit和Java中的void大致等价，它只有一个实例值，写成()。  
 >>2.2 scala.AnyRef实际上是Java的java.lang.Object类别名。所以我们自定义类型都是该类的子类。  
 >>2.3 AnyVal和AnyRef有一个共同的子类Nothing表示不正常的终止。
->>2.4 Null类型是AnyRef的子类型，它可兼容任何AnyRef类型，但不兼容AnyVal。因此引用类型的可以赋值为null但数值类型不可以赋值为null。
+>>2.4 Null类型是AnyRef的子类型，它可兼容任何AnyRef类型，但不兼容AnyVal。因此引用类型的可以赋值为null,而数值类型不可以赋值为null。
 
 
 
