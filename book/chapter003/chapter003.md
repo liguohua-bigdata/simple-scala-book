@@ -40,27 +40,6 @@ scala> arr.length
 res1: Int = 5
 ```
 
-###二、数组的元素
-1.获取数组中指定下标的元素
-```scala
-scala> val arr=Array(18,20,87,4,23)
-arr: Array[Int] = Array(18, 20, 87, 4, 23)
-
-scala> arr(0)
-res2: Int = 18
-```
-
-2.更改数组中指定下标的元素
-```scala
-scala> val arr=Array(18,20,87,4,23)
-arr: Array[Int] = Array(18, 20, 87, 4, 23)
-
-scala> arr(1)=1024
-
-scala> arr
-res4: Array[Int] = Array(18, 1024, 87, 4, 23)
-```
-
 ###三、数组的基本操作
 数组是可以用下标标识的一组元素的集合。在这个集合上，一般可以执行增删改查的操作，和一些辅助增删改查的操作。
 1.数组求和
@@ -217,7 +196,6 @@ scala> arr1
 res45: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
 ```
 
-
 15.数组排序，返回一个新的数组,原来数组不会发生任何改变，如果数组的元素是数字，默认从小到大排序。
 ```scala
 scala> val arr=Array(3,5,8,9,4)
@@ -244,7 +222,7 @@ scala> arr
 res4: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
 ```
 
-17.数组的反转，返回一个新的数组,原来数组不会发生任何改变，
+17.数组的反转，返回一个新的数组,原来数组不会发生任何改变
 ```scala
 scala> val arr=Array(3,5,8,9,4)
 arr: Array[Int] = Array(3, 5, 8, 9, 4)
@@ -257,7 +235,64 @@ res9: Array[Int] = Array(4, 9, 8, 5, 3)
 scala> arr
 res10: Array[Int] = Array(3, 5, 8, 9, 4)
 ```
-###四、数组的遍历
+
+18.获取数组中指定下标的元素
+```scala
+scala> val arr=Array(18,20,87,4,23)
+arr: Array[Int] = Array(18, 20, 87, 4, 23)
+
+scala> arr(0)
+res2: Int = 18
+```
+
+19.更改数组中指定下标的元素
+```scala
+scala> val arr=Array(18,20,87,4,23)
+arr: Array[Int] = Array(18, 20, 87, 4, 23)
+
+scala> arr(1)=1024
+
+scala> arr
+res4: Array[Int] = Array(18, 1024, 87, 4, 23)
+```
+
+###四、数组中常用的高阶函数
+1.count()函数：对数组进行统计，统计不等于0的元素的个数
+```scala
+scala> val arr=Array(3,5,8,9,4)
+arr: Array[Int] = Array(3, 5, 8, 9, 4)
+
+scala> arr.count(_ != 0)
+res28: Int = 5
+```
+2.map()函数：对数组进行的转化，原数组不变
+```scala
+scala> val arr=Array(3,5,8,9,4)
+arr: Array[Int] = Array(3, 5, 8, 9, 4)
+
+//数组的转化,返回新数组
+scala> arr.map(_*2)
+res29: Array[Int] = Array(6, 10, 16, 18, 8)
+//原来数组不变
+scala> arr
+res30: Array[Int] = Array(3, 5, 8, 9, 4)
+```
+3.filter()函数：对数组的进行过滤，原数组不变
+```scala
+scala> val arr=Array(3,5,8,9,4)
+arr: Array[Int] = Array(3, 5, 8, 9, 4)
+
+//数组的过滤,返回新数组
+scala> arr.filter(x=>(x%2)!=0)
+res33: Array[Int] = Array(3, 5, 9)
+
+//原来数组不变
+scala> arr
+res34: Array[Int] = Array(3, 5, 8, 9, 4)
+```
+
+
+###五、数组的遍历
 1.数组的to遍历
 ![](images/Snip20161026_2.png) 
 代码如下：
@@ -354,8 +389,54 @@ object ArrayTest {
   }
 }
 ```
+7.遍历数组的练习一，遍历数组，为数组赋值，并从数组中取值
 
-###五、 scala.Array对象中的常用方法
+![](images/Snip20161027_1.png) 
+代码如下：
+```scala
+package chapter003
+
+object ArrayTest {
+  def main(args: Array[String]): Unit = {
+    //1.定义一个数组
+    val arr = new Array[Int](10)
+    //2.遍历数组进行赋值操作
+    for (i <- 0 until arr.length) {
+      arr(i) = (i * 2)
+    }
+    //3.遍历数组进行取值操作
+    for (i <- 0 until arr.length) {
+      //打印数组中的每一个元素
+      print(arr(i) + "\t")
+    }
+  }
+}
+```
+7.遍历数组的练习二，遍历数组，为数组赋值，并从数组中取值
+
+![](images/Snip20161027_2.png) 
+代码如下：
+```scala
+package chapter003
+
+object ArrayTest {
+  def main(args: Array[String]): Unit = {
+    //1.定义一个数组
+    val arr = new Array[Int](10)
+    //2.遍历数组进行赋值操作
+    for (i <- 0 until arr.length) {
+      arr(i) = (i * 2)
+    }
+    //3.遍历数组进行取值操作,使用数组的元素进行遍历
+    for (e <- arr) {
+      //打印数组中的每一个元素
+      print(e + "\t")
+    }
+  }
+}
+```
+
+###六、 scala.Array对象中的常用方法
 0.引入scala.Array对象。因为以下操作都定义在scala.Array对象中，如果不引入此对象，操作都不能执行。
 ```scala
 scala> import Array._
@@ -380,22 +461,6 @@ res11: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
 
 scala> arr2
 res12: Array[String] = Array(jack, lily)
-```
-
-
-```scala
-
-```
-
-
-```scala
-
-```
-
-
-
-```scala
-
 ```
 
 
