@@ -52,7 +52,7 @@ scala> arr(0)
 res2: Int = 18
 ```
 
-12.更改数组中指定下标的元素
+2.更改数组中指定下标的元素
 ```scala
 scala> val arr=Array(18,20,87,4,23)
 arr: Array[Int] = Array(18, 20, 87, 4, 23)
