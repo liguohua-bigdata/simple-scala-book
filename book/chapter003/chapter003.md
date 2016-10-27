@@ -257,36 +257,6 @@ res9: Array[Int] = Array(4, 9, 8, 5, 3)
 scala> arr
 res10: Array[Int] = Array(3, 5, 8, 9, 4)
 ```
-
-
-
-```scala
-
-```
-
-
-```scala
-
-```
-
-
-```scala
-
-```
-
-
-
-```scala
-
-```
-
-
-```scala
-
-```
-
-
-
 ###四、数组的遍历
 1.数组的to遍历
 ![](images/Snip20161026_2.png) 
@@ -385,6 +355,53 @@ object ArrayTest {
 }
 ```
 
+###五、 scala.Array对象中的常用方法
+0.引入scala.Array对象。因为以下操作都定义在scala.Array对象中，如果不引入此对象，操作都不能执行。
+```scala
+scala> import Array._
+import Array._
+```
+1.concat():合并数组.会返回新的数组，原数组不变
+```scala
+//1.定义两个数组
+scala> val arr1 = Array("zhangsan", "lisi", "wangwu", "zhaoliu")
+arr1: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+
+scala> val arr2=Array("jack","lily")
+arr2: Array[String] = Array(jack, lily)
+
+//2.合并两个数组，返回新的数组
+scala> var arr3 =  concat( arr1, arr2)
+arr3: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu, jack, lily)
+
+//3.查看原数组，原数组不变
+scala> arr1
+res11: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+
+scala> arr2
+res12: Array[String] = Array(jack, lily)
+```
+
+
+```scala
+
+```
+
+
+```scala
+
+```
+
+
+
+```scala
+
+```
+
+
+```scala
+
+```
 
 ```scala
 
