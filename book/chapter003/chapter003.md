@@ -62,6 +62,7 @@ res4: Array[Int] = Array(18, 1024, 87, 4, 23)
 ```
 
 ###三、数组的基本操作
+数组是可以用下标标识的一组元素的集合。在这个集合上，一般可以执行增删改查的操作，和一些辅助增删改查的操作。
 1.数组求和
 ```scala
 scala> val arr = Array(3,5,8,9,4)
@@ -215,6 +216,76 @@ res44: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu, jack, lily)
 scala> arr1
 res45: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
 ```
+
+
+15.数组排序，返回一个新的数组,原来数组不会发生任何改变，如果数组的元素是数字，默认从小到大排序。
+```scala
+scala> val arr=Array(3,5,8,9,4)
+arr: Array[Int] = Array(3, 5, 8, 9, 4)
+
+//返回一个新的数组
+scala> arr.sorted
+res1: Array[Int] = Array(3, 4, 5, 8, 9)
+
+//原数组不变
+scala> arr
+res2: Array[Int] = Array(3, 5, 8, 9, 4)
+```
+
+16.数组排序，返回一个新的数组,原来数组不会发生任何改变，如果数组的元素是字符或字符串，默认按字母从小到大排序。
+```scala
+scala> val arr = Array("zhangsan", "lisi", "wangwu", "zhaoliu")
+arr: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+
+scala> arr.sorted
+res3: Array[String] = Array(lisi, wangwu, zhangsan, zhaoliu)
+
+scala> arr
+res4: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+```
+
+17.数组的反转，返回一个新的数组,原来数组不会发生任何改变，
+```scala
+scala> val arr=Array(3,5,8,9,4)
+arr: Array[Int] = Array(3, 5, 8, 9, 4)
+
+//返回一个新的数组//
+scala> arr.reverse
+res9: Array[Int] = Array(4, 9, 8, 5, 3)
+
+//原数组不变
+scala> arr
+res10: Array[Int] = Array(3, 5, 8, 9, 4)
+```
+
+
+
+```scala
+
+```
+
+
+```scala
+
+```
+
+
+```scala
+
+```
+
+
+
+```scala
+
+```
+
+
+```scala
+
+```
+
+
 
 ###四、数组的遍历
 1.数组的to遍历
