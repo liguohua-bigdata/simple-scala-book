@@ -363,7 +363,26 @@ object ArrayTest {
 
 ```
 
-3.直接对元素进行遍历
+3.利用数组的迭代器进行遍历
+![](images/Snip20161027_3.png) 
+代码如下：
+```scala
+package chapter003
+
+object ArrayTest {
+  def main(args: Array[String]): Unit = {
+    val arr = Array("zhangsan", "lisi", "wangwu", "zhaoliu")
+    //数组的迭代器
+    val itr = arr.iterator
+    //使用迭代器进行遍历
+    while (itr.hasNext) {
+      print(itr.next() + "\t")
+    }
+  }
+}
+```
+
+4.直接对元素进行遍历
 ![](images/Snip20161026_4.png) 
 代码如下：
 ```scala
@@ -378,7 +397,7 @@ object ArrayTest {
 }
 ```
 
-4.指定步长进行遍历
+5.指定步长进行遍历
 ![](images/Snip20161026_5.png) 
 代码如下：
 ```scala
@@ -395,7 +414,7 @@ object ArrayTest {
 }
 ```
 
-5.倒序遍历数组
+6.倒序遍历数组
 ![](images/Snip20161026_7.png) 
 代码如下：
 ```scala
@@ -412,7 +431,7 @@ object ArrayTest {
 }
 ```
 
-6.指定步长，倒序遍历数组
+7.指定步长，倒序遍历数组
 ![](images/Snip20161026_8.png) 
 代码如下：
 ```scala
@@ -428,8 +447,8 @@ object ArrayTest {
   }
 }
 ```
-7.遍历数组的练习一，遍历数组，为数组赋值，并从数组中取值
 
+8.遍历数组的练习一，遍历数组，为数组赋值，并从数组中取值
 ![](images/Snip20161027_1.png) 
 代码如下：
 ```scala
@@ -451,8 +470,8 @@ object ArrayTest {
   }
 }
 ```
-7.遍历数组的练习二，遍历数组，为数组赋值，并从数组中取值
 
+9.遍历数组的练习二，遍历数组，为数组赋值，并从数组中取值
 ![](images/Snip20161027_2.png) 
 代码如下：
 ```scala
@@ -476,17 +495,17 @@ object ArrayTest {
 ```
 
 ###六、 scala.Array对象中的常用方法
-0.引入scala.Array对象。因为以下操作都定义在scala.Array对象中，如果不引入此对象，操作都不能执行。
+1.引入scala.Array对象。因为以下操作都定义在scala.Array对象中，如果不引入此对象，操作都不能执行。
 ```scala
 scala> import Array._
 import Array._
 ```
-1.利用range()创建数组
+2.利用range()创建数组
 ```scala
 scala> var arr = range(10, 20, 2)
 arr: Array[Int] = Array(10, 12, 14, 16, 18)
 ```
-1.concat():合并数组.会返回新的数组，原数组不变
+3.concat():合并数组.会返回新的数组，原数组不变
 ```scala
 //1.定义两个数组
 scala> val arr1 = Array("zhangsan", "lisi", "wangwu", "zhaoliu")
