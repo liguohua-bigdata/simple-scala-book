@@ -500,11 +500,13 @@ object ArrayTest {
 scala> import Array._
 import Array._
 ```
+
 2.利用range()创建数组
 ```scala
 scala> var arr = range(10, 20, 2)
 arr: Array[Int] = Array(10, 12, 14, 16, 18)
 ```
+
 3.concat():合并数组.会返回新的数组，原数组不变
 ```scala
 //1.定义两个数组
