@@ -41,8 +41,29 @@ res1: Int = 5
 ```
 
 ###三、数组的基本操作
-数组是可以用下标标识的一组元素的集合。在这个集合上，一般可以执行增删改查的操作，和一些辅助增删改查的操作。
-1.数组求和
+数组是可以用下标标识的一组元素的集合。在这个集合上，一般可以执行一些常见的操作！
+
+1.获取数组中指定下标的元素
+```scala
+scala> val arr=Array(18,20,87,4,23)
+arr: Array[Int] = Array(18, 20, 87, 4, 23)
+
+scala> arr(0)
+res2: Int = 18
+```
+
+12.更改数组中指定下标的元素
+```scala
+scala> val arr=Array(18,20,87,4,23)
+arr: Array[Int] = Array(18, 20, 87, 4, 23)
+
+scala> arr(1)=1024
+
+scala> arr
+res4: Array[Int] = Array(18, 1024, 87, 4, 23)
+```
+
+3.数组求和
 ```scala
 scala> val arr = Array(3,5,8,9,4)
 arr: Array[Int] = Array(3, 5, 8, 9, 4)
@@ -51,7 +72,7 @@ scala> arr.sum
 res1: Int = 29
 ```
 
-2.数组求最大值
+4.数组求最大值
 ```scala
 scala> val arr = Array(3,5,8,9,4)
 arr: Array[Int] = Array(3, 5, 8, 9, 4)
@@ -60,7 +81,7 @@ scala> arr.max
 res2: Int = 9
 ```
 
-3.数组求最小值
+5.数组求最小值
 ```scala
 scala> val arr = Array(3,5,8,9,4)
 arr: Array[Int] = Array(3, 5, 8, 9, 4)
@@ -69,7 +90,7 @@ scala> arr.min
 res4: Int = 3
 ```
 
-4.数组的toString()方法，返回数组的哈希地址
+6.数组的toString()方法，返回数组的哈希地址
 ```scala
 scala> val arr = Array(3,5,8,9,4)
 arr: Array[Int] = Array(3, 5, 8, 9, 4)
@@ -78,7 +99,7 @@ scala> arr.toString()
 res6: String = [I@19b02dfd
 ```
 
-5.数组的toString()方法，返回数组的字符串表达形式
+7.数组的toString()方法，返回数组的字符串表达形式
 ```scala
 scala> val arr = Array(3,5,8,9,4)
 arr: Array[Int] = Array(3, 5, 8, 9, 4)
@@ -93,7 +114,7 @@ scala> arr.mkString("#","-","#")
 res9: String = #3-5-8-9-4#
 ```
 
-6.数组的克隆
+8.数组的克隆
 ```scala
 scala> val arr1=Array(3,5,8,9,4)
 arr1: Array[Int] = Array(3, 5, 8, 9, 4)
@@ -102,7 +123,7 @@ scala> val arr2=arr1.clone()
 arr2: Array[Int] = Array(3, 5, 8, 9, 4)
 ```
 
-7.数组的更新,更新指定下标中的元素
+9.数组的更新,更新指定下标中的元素
 ```scala
 scala> val arr=Array("zhangsan","lisi","wangwu","zhaoliu")
 arr: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
@@ -113,31 +134,13 @@ scala> arr
 res17: Array[String] = Array(zhangsan, lily, wangwu, zhaoliu)
 ```
 
-8.数组是否包含指定的元素
+10.数组是否包含指定的元素
 ```scala
 val arr=Array("zhangsan","lisi","wangwu","zhaoliu")
 arr: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
 
 scala> arr.contains("zhangsan")
 res22: Boolean = true
-```
-
-9.判断数组为空
-```scala
-scala> val arr=Array("zhangsan","lisi","wangwu","zhaoliu")
-arr: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
-
-scala> arr.isEmpty
-res24: Boolean = false
-```
-
-10.判断数组不为空
-```scala
-scala> val arr=Array("zhangsan","lisi","wangwu","zhaoliu")
-arr: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
-
-scala> arr.nonEmpty
-res25: Boolean = true
 ```
 
 11.查看数组的类型
@@ -162,6 +165,7 @@ res36: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu, jack)
 scala> arr1
 res41: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
 ```
+
 13.数组的尾部追加数组元素，返回一个新的数组，':+'将整个数组添加到最后一个元素上。
 ```scala
 scala> val arr1 = Array("zhangsan", "lisi", "wangwu", "zhaoliu")
@@ -227,7 +231,7 @@ res4: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
 scala> val arr=Array(3,5,8,9,4)
 arr: Array[Int] = Array(3, 5, 8, 9, 4)
 
-//返回一个新的数组//
+//返回一个新的数组
 scala> arr.reverse
 res9: Array[Int] = Array(4, 9, 8, 5, 3)
 
@@ -236,24 +240,57 @@ scala> arr
 res10: Array[Int] = Array(3, 5, 8, 9, 4)
 ```
 
-18.获取数组中指定下标的元素
+18.数组的zip操作一，返回一个新的数组,原来数组不会发生任何改变
 ```scala
-scala> val arr=Array(18,20,87,4,23)
-arr: Array[Int] = Array(18, 20, 87, 4, 23)
+//1.定义两个数组
+scala> val arr1 = Array("zhangsan","lisi","wangwu","zhaoliu")
+arr1: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
 
-scala> arr(0)
-res2: Int = 18
+//2.返回一个新的数组
+scala> val arr2 = Array(18,20,19)
+arr2: Array[Int] = Array(18, 20, 19)
+
+//3.原来数组不会发生任何改变
+scala> val arr3 = arr1.zip(arr2)
+arr3: Array[(String, Int)] = Array((zhangsan,18), (lisi,20), (wangwu,19))
+
+scala> arr1
+res0: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+
+scala> arr2
+res1: Array[Int] = Array(18, 20, 19)
 ```
 
-19.更改数组中指定下标的元素
+19.数组的zip操作二
 ```scala
-scala> val arr=Array(18,20,87,4,23)
-arr: Array[Int] = Array(18, 20, 87, 4, 23)
+//1.定义两个数组
+scala> val arr1 = Array("zhangsan","lisi","wangwu","zhaoliu")
+arr1: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
 
-scala> arr(1)=1024
+scala> val arr2 = Array(18,20,19)
+arr2: Array[Int] = Array(18, 20, 19)
 
-scala> arr
-res4: Array[Int] = Array(18, 1024, 87, 4, 23)
+//2.返回一个新的数组
+scala> val arr4= arr2.zip(arr1)
+arr4: Array[(Int, String)] = Array((18,zhangsan), (20,lisi), (19,wangwu))
+```
+
+20.判断数组为空
+```scala
+scala> val arr=Array("zhangsan","lisi","wangwu","zhaoliu")
+arr: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+
+scala> arr.isEmpty
+res24: Boolean = false
+```
+
+21.判断数组不为空
+```scala
+scala> val arr=Array("zhangsan","lisi","wangwu","zhaoliu")
+arr: Array[String] = Array(zhangsan, lisi, wangwu, zhaoliu)
+
+scala> arr.nonEmpty
+res25: Boolean = true
 ```
 
 ###四、数组中常用的高阶函数
@@ -265,6 +302,7 @@ arr: Array[Int] = Array(3, 5, 8, 9, 4)
 scala> arr.count(_ != 0)
 res28: Int = 5
 ```
+
 2.map()函数：对数组进行的转化，原数组不变
 ```scala
 scala> val arr=Array(3,5,8,9,4)
@@ -277,6 +315,7 @@ res29: Array[Int] = Array(6, 10, 16, 18, 8)
 scala> arr
 res30: Array[Int] = Array(3, 5, 8, 9, 4)
 ```
+
 3.filter()函数：对数组的进行过滤，原数组不变
 ```scala
 scala> val arr=Array(3,5,8,9,4)
@@ -442,6 +481,11 @@ object ArrayTest {
 scala> import Array._
 import Array._
 ```
+1.利用range()创建数组
+```scala
+scala> var arr = range(10, 20, 2)
+arr: Array[Int] = Array(10, 12, 14, 16, 18)
+```
 1.concat():合并数组.会返回新的数组，原数组不变
 ```scala
 //1.定义两个数组
@@ -464,9 +508,6 @@ res12: Array[String] = Array(jack, lily)
 ```
 
 
-```scala
-
-```
 
 ```scala
 
